@@ -1,5 +1,5 @@
 # Animator web page:
-Click (here)[https://amantini1997.github.io/ngAnimator/dist/]
+Click [here](https://amantini1997.github.io/ngAnimator/dist/)
 
 
 # AngularAnimator
