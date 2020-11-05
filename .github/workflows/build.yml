@@ -20,6 +20,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build:ci 
+      # - name: Test
+      #   run: npm run test:ci 
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
@@ -48,3 +50,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist
+
+
