@@ -6,7 +6,7 @@
     "start": "ng serve --open",
     "build": "ng build",
     "test": "ng test",
-    "build:ci": "ng build --prod --sourceMap=false --base-href /ngAnimator/",
+    "build:ci": "ng build --prod --sourceMap=false --base-href ./",
     "test:ci": "ng test --watch=false --code-coverage --source-map true",
     "lint": "ng lint",
     "e2e": "ng e2e"
