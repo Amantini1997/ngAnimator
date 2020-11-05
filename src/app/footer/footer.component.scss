@@ -1,0 +1,8 @@
+@import "../../varaible.scss";
+
+:host > nav {
+    background-color: $main-color;
+    color: $main-contrast;
+    width: 100%;
+    height: 100px;
+}

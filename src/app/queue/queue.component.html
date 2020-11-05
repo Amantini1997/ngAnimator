@@ -1,0 +1,84 @@
+<h1>Queue</h1>
+<div class="explanation">
+    The <b>queue</b> is a data structure of the type <b class="highlight">FIFO</b> where the user 
+    can only add elements at the <b>rear</b> (the bottom of the queue) and remove them from the front.
+    <!-- ADD THE LINK TO THE GLOSSARY FOR FIFO -->
+
+    Below is a visual demonstration of how a queue works.
+    <br>
+    To make the example concrete, the queue is composed by people queuing to enter a shop.
+</div>
+<br>
+<br>
+<hr>
+
+<div class="btn-list">
+    <button (click)="enqueue(input.value)">enqueue ( )</button>
+    <input #input id="name" type="text" placeholder="Name to enqueue">
+    <button (click)="size()">size ( )</button>
+    <button (click)="isEmpty()">isEmpty ( )</button>
+    <button (click)="dequeue()">dequeue ( )</button>
+    <button (click)="front()">front ( )</button>
+</div>
+
+<div class="output">
+    <span class="output__placeholder">Any operations will appear here</span>
+</div>
+
+<hr>
+<div class="queue">
+    <div class="flex-row">
+        <img src="assets/img/store.png" class="queue__element" alt="shop">
+        <div class="queue__ctn">
+            <ng-container *ngFor="let person of queue; let i = index">
+                <img src="assets/img/person.png" class="queue__element person" alt="person">
+                <div class="tooltip" style="margin-left: {{i * 140}}px">{{person}}</div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="flex-row">
+        <!-- STORE PLACEHOLDER -->
+        <img src="assets/img/store.png" class="queue__element" style="visibility:hidden" alt="palceholder">
+        <!-- FRONT -->
+        <img src="assets/img/front.png" class="queue__element" alt="front" *ngIf="queue.length > 1">
+        <!-- PLACEHOLDERS -->
+        <ng-container *ngFor="let person of queue; let i = index">
+            <img src="assets/img/empty.png" class="queue__element" 
+                *ngIf="i > 0 && i != queue.length - 1" style="visibility:hidden">
+        </ng-container>
+        <!-- REAR -->
+        <img src="assets/img/rear.png" class="queue__element" alt="rear" *ngIf="queue.length > 1">
+        <!-- FRONT AND REAR -->
+        <img src="assets/img/front&rear.png" class="queue__element" alt="rear & front" *ngIf="queue.length == 1">
+    </div>
+</div>
+
+<hr>
+<div class="explanation">
+    <h3>The Methods</h3>
+    A queue has 5 public methods:
+    <ul>
+        <li><b>eqnueue()</b>, which add an element to the rear of the collection;</li>
+        <li><b>dequeue()</b>, which removes and returns the element at the front of the queue;</li>
+        <li><b>front()</b>, which returns the element at the front of the queue <b>without</b> removing it.</li>
+        <li><b>size()</b>, which returns the number of elements contained in the queue.</li>
+        <li><b>isEmpty()</b>, which returns true is the queue is empty, false otherwise.</li>
+    </ul>
+    All this methods can be used in the animation above to play around with the queue.
+
+    <div class="note">
+        <ul style="margin: 0">
+            <li>The big <b>F</b> and <b>R</b> below the people stand respectively for <b>Front</b> and <b>Rear</b>.</li>
+            <li>Each method will print the output in the box between <i>"front()"</i> and <i>"dequeue()"</i>.</li>
+            <li>To Enqueue a new person, specify the name in the box next to <i>"enqueue()"</i>.</li>
+        </ul> 
+    </div>
+
+    <h3>Quiz</h3>
+    <button class="collapsible"><b>Hover a person and see what happens. What do you notice?</b></button>
+    <div class="content">
+        Only the name of the person at the front of the queue can be seen. 
+        That is because the queue has direct access only to that person
+    </div>
+
+</div>

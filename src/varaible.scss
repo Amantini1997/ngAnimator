@@ -1,0 +1,52 @@
+$main-color: rgb(40, 185, 142);
+$main-color-blurred: rgba(40, 185, 142, .2);
+$main-color-active: rgb(46, 240, 182);
+$main-contrast: black;
+
+.flew-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flew-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.note {
+    background-color: $main-color-blurred;
+    border-left: solid 10px $main-color;
+    margin: 15px 0;
+    padding: 5px;
+
+    &.no-pad {
+        padding: 0;
+    }
+}
+
+.collapsible {
+    background-color: $main-contrast;
+    color: $main-color;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+    &:hover {
+        background-color: $main-color-active;
+    }
+
+    &:focus + .content {
+        display: block;
+    }
+
+    & + .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: $main-color-blurred;
+    }
+}

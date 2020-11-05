@@ -1,0 +1,15 @@
+:host {
+    padding: 20px;
+}
+
+.reason {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgb(236, 236, 236);
+    
+    & > .reason__title {
+        font-size: large;
+        font-weight: bold;
+    }
+}
+
