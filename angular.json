@@ -64,6 +64,7 @@
             }
           }
         },
+        "build:ci": "ng build --prod --sourceMap=false --base-href /YOUR_REPOSITORY_NAME_HERE/",
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
@@ -99,6 +100,7 @@
             "scripts": []
           }
         },
+        "test:ci": "ng test --watch=false --code-coverage --source-map true",
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
