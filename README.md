@@ -1,3 +1,7 @@
+# Animator web page:
+Click [here](https://amantini1997.github.io/ngAnimator/dist/)
+
+
 # AngularAnimator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
